@@ -1,0 +1,418 @@
+:root {
+    --color-main: #4caf4f;
+    --color-text: #4d4d4d;
+    --color-muted: #717171;
+    --color-soft: #f2f7fd;
+    --color-footer: #263238;
+    --color-header-start: rgba(255, 255, 255, 0.98);
+    --color-header-mid: rgba(248, 251, 255, 0.92);
+    --color-header-end: rgba(242, 247, 253, 0.88);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a,
+button,
+input[type="submit"],
+input[type="button"],
+.btn,
+[role="button"] {
+    cursor: pointer;
+}
+
+/* Header / Navigation Section */
+.site-header {
+    background: linear-gradient(to bottom, var(--color-header-mid) 0%, var(--color-header-end) 100%);
+}
+
+.site-header .nav-list a,
+.site-header .nav-list a:visited {
+    color: var(--color-text);
+}
+
+.site-header .nav-list a:hover {
+    color: var(--color-main);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100svh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+}
+
+.hero-image-wrap {
+    align-items: center;
+    min-height: 0;
+}
+
+.hero-image {
+    max-width: min(100%, 430px);
+    max-height: calc(100vh - 12rem);
+    object-fit: contain;
+}
+
+/* Clients Logo Marquee Section */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: clients-marquee 20s linear infinite;
+    will-change: transform;
+}
+
+.clients-img:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes clients-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Community Cards Section */
+/* The card layout is handled with Tailwind utility classes in the HTML. */
+
+/* About Section */
+/* The two-column layout and spacing are handled with Tailwind flex utilities. */
+
+/* Statistics / Reinvent Section */
+/* Responsive flex and grid alignment are handled directly in the HTML. */
+
+/* Design Section */
+/* This section reuses the same responsive content pattern as the About section. */
+
+/* Testimonial Logo Marquee Section */
+.testimonial-marquee {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 2rem;
+    animation: testimonial-marquee 18s linear infinite;
+    will-change: transform;
+}
+
+.testimonial-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-shrink: 0;
+}
+
+.testimonial-logos:hover .testimonial-marquee {
+    animation-play-state: paused;
+}
+
+@keyframes testimonial-marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Blog Cards Section */
+.blog-card-shell {
+    isolation: isolate;
+}
+
+.blog-card-content {
+    z-index: 2;
+}
+
+/* Footer Section */
+footer input::placeholder {
+    color: #c1c5c9;
+}
+
+/* Mobile Navigation Section */
+@media (max-width: 767px) {
+    .nav-panel.mobile-nav-open,
+    .nav-panel:not(.max-md\:hidden) {
+        display: block;
+    }
+
+    .nav-panel {
+        width: 100%;
+    }
+
+    .nav-list {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.88);
+        padding: 1rem;
+        box-shadow: 0 18px 32px rgba(38, 50, 56, 0.12);
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list a {
+        display: block;
+        width: 100%;
+        border-radius: 0.75rem;
+        background: rgba(76, 175, 79, 0.08);
+        padding: 0.85rem 1rem;
+        text-align: center;
+    }
+
+    .mobile-nav-actions {
+        border-top: 1px solid rgba(76, 175, 79, 0.14);
+    }
+}
+
+/* Tablet Responsive Adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .site-header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .hero-section {
+        min-height: min(100svh, 100vh);
+    }
+
+    .hero-image {
+        max-height: 44vh;
+    }
+
+    .hero-section .mx-auto,
+    #feature .mx-auto,
+    #design .mx-auto,
+    #testimonial .mx-auto {
+        width: 88%;
+    }
+
+    #home .mx-auto {
+        gap: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    #community .mt-10,
+    .py-14 .mt-10 {
+        margin-top: 2rem;
+    }
+
+    .blog-card-content {
+        width: 82% !important;
+    }
+}
+
+/* Medium Screen Responsive Fixes */
+@media (min-width: 570px) and (max-width: 1095px) {
+    .site-header > .mx-auto,
+    .hero-section > .mx-auto,
+    #community > .mx-auto,
+    #feature > .mx-auto,
+    #design > .mx-auto,
+    #testimonial > .mx-auto,
+    main > section > .mx-auto,
+    footer > .mx-auto {
+        width: 88%;
+    }
+
+    .site-header > .mx-auto {
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .nav-list {
+        gap: 1rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .desktop-nav-actions {
+        gap: 0.75rem;
+    }
+
+    .hero-section {
+        padding-top: 7.5rem;
+    }
+
+    .hero-content {
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.5rem, 4vw, 3.4rem);
+    }
+
+    .hero-content p {
+        max-width: 34rem;
+    }
+
+    .hero-image-wrap {
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: min(100%, 390px);
+        max-height: 360px;
+    }
+
+    #community .mt-10,
+    .py-14 .mt-10,
+    .py-16 .mt-10 {
+        margin-top: 2.25rem;
+    }
+
+    #community .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-items: center;
+    }
+
+    #community .grid > div {
+        width: 100%;
+        height: 100%;
+    }
+
+    #community .grid > div:last-child {
+        grid-column: 1 / -1;
+        max-width: 24rem;
+    }
+
+    #community article {
+        height: 100%;
+    }
+
+    #community article h3 {
+        font-size: 1.9rem;
+    }
+
+    #feature .mx-auto,
+    #design .mx-auto {
+        gap: 2.5rem;
+    }
+
+    #feature img,
+    #design img {
+        max-width: 420px;
+        max-height: 360px;
+    }
+
+    #feature h2,
+    #design h2 {
+        font-size: 1.9rem;
+    }
+
+    #testimonial .mx-auto {
+        gap: 2rem;
+    }
+
+    #testimonial article {
+        padding: 1.75rem;
+    }
+
+    .testimonial-logos {
+        max-width: 100%;
+    }
+
+    .blog-card-content {
+        width: 80% !important;
+    }
+
+    .blog-card-content h3 {
+        font-size: 1.05rem;
+    }
+
+    footer .grid {
+        gap: 2rem;
+    }
+
+    #testimonial > .mx-auto > div:last-child {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        max-height: none;
+    }
+}
+
+/* Mobile Layout Refinements */
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: auto;
+        max-height: none;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-image {
+        max-width: min(100%, 380px);
+        max-height: 320px;
+    }
+
+    .marquee-track {
+        animation-duration: 14s;
+    }
+
+    .testimonial-marquee {
+        animation-duration: 14s;
+    }
+
+    .blog-card-content {
+        width: 88% !important;
+        margin-top: -3.5rem;
+        padding: 1rem 1rem 1.25rem;
+    }
+
+    .hero-section .mx-auto,
+    #community .mx-auto,
+    #feature .mx-auto,
+    #design .mx-auto,
+    #testimonial .mx-auto,
+    footer .mx-auto,
+    main > section > .mx-auto {
+        width: 90%;
+    }
+}
+
+/* Small Screen Readability Section */
+@media (max-width: 639px) {
+    h1 {
+        word-spacing: 0.2rem;
+    }
+
+    .site-header {
+        padding-top: 0.85rem;
+        padding-bottom: 0.85rem;
+    }
+}
