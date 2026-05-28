@@ -362,6 +362,10 @@ footer input::placeholder {
     .hero-section {
         max-height: none;
     }
+     .Design{
+        width: 100vw;
+        overflow: hidden;
+     }
 }
 
 /* Mobile Layout Refinements */
