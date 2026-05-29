@@ -179,10 +179,10 @@ document.getElementById("year").textContent =
 
 
 
-    
 
-   const subscribeForm = document.getElementById("subscribe-form");
-const emailInput = document.getElementById("email");
+
+const subscribeForm = document.getElementById("subscribe-form");
+const emailInput = document.getElementById("subscribe_email");
 const subscribeMessage = document.getElementById("subscribe-message");
 
 if (subscribeForm && emailInput && subscribeMessage) {
