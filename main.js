@@ -206,21 +206,25 @@ if (subscribeForm && emailInput && subscribeMessage) {
         const formData = new FormData(subscribeForm);
 
         try {
-            await fetch(subscribeForm.action, {
-                method: "POST",
-                body: formData,
-                headers: {
-                    Accept: "application/json"
-                }
-            });
-
-            subscribeMessage.textContent = "Subscribed successfully ✓";
-            subscribeMessage.style.color = "#4CAF4F";
-
-            emailInput.value = "";
-        } catch {
-            subscribeMessage.textContent = "Something went wrong";
-            subscribeMessage.style.color = "#ff6b6b";
+    const response = await fetch(subscribeForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+            Accept: "application/json"
         }
+    });
+
+    if (!response.ok) {
+        throw new Error("Form submit failed");
+    }
+
+    subscribeMessage.textContent = "Subscribed successfully ✓";
+    subscribeMessage.style.color = "#4CAF4F";
+
+    emailInput.value = "";
+} catch {
+    subscribeMessage.textContent = "Something went wrong, please try again";
+    subscribeMessage.style.color = "#ff6b6b";
+}
     });
 }
