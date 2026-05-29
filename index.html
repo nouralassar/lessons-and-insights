@@ -34,6 +34,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css">
     <!-- App styles -->
     <link rel="stylesheet" href="css/style.css"/>
     <title>Nexcent</title>
@@ -50,21 +51,21 @@
             </button>
             <nav id="mobile-nav" aria-label="Primary navigation" class="nav-panel max-md:order-3 max-md:hidden max-md:w-full">
                 <ul class="nav-list flex flex-wrap items-center justify-center gap-4 text-sm font-medium capitalize text-black md:gap-7">
-                    <li><a href="#home" class="transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">home</a></li>
-                    <li><a href="#community" class="transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">service</a></li>
-                    <li><a href="#feature" class="transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">feature</a></li>
-                    <li><a href="#design" class="transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">product</a></li>
-                    <li><a href="#testimonial" class="transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">testimonial</a></li>
-                    <li><a href="#footer" class="transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">faq</a></li>
+                    <li><a href="#home" class="nav-link transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">home</a></li>
+                    <li><a href="#community" class="nav-link transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">service</a></li>
+                    <li><a href="#feature" class="nav-link transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">feature</a></li>
+                    <li><a href="#design" class="nav-link transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">product</a></li>
+                    <li><a href="#testimonial" class="nav-link transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">testimonial</a></li>
+                    <li><a href="#footer" class="nav-link transition duration-300 hover:-translate-y-1 hover:text-[var(--color-main)]">faq</a></li>
                 </ul>
                 <div class="mobile-nav-actions hidden flex-col gap-3 pt-4 max-md:flex">
-                    <a href="#" class="grid h-11 w-full place-items-center rounded-md border border-[var(--color-main)] text-sm font-medium capitalize text-[var(--color-main)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--color-main)] hover:text-white">login</a>
-                    <a href="#" class="grid h-11 w-full place-items-center rounded-md bg-[var(--color-main)] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">sign up</a>
+                    <a href="#" class="js-login-btn grid h-11 w-full place-items-center rounded-md border border-[var(--color-main)] text-sm font-medium capitalize text-[var(--color-main)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--color-main)] hover:text-white">login</a>
+                    <a href="#footer" class="grid h-11 w-full place-items-center rounded-md bg-[var(--color-main)] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">sign up</a>
                 </div>
             </nav>
             <div class="desktop-nav-actions flex items-center gap-3 sm:gap-5 max-md:hidden">
-                <a href="#" class="grid h-10 w-24 place-items-center rounded-md text-sm font-medium capitalize text-[var(--color-main)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--color-main)] hover:text-white sm:w-28">login</a>
-                <a href="#" class="grid h-10 w-24 place-items-center rounded-md bg-[var(--color-main)] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)] sm:w-28">sign up</a>
+                <a href="#" class="js-login-btn grid h-10 w-24 place-items-center rounded-md text-sm font-medium capitalize text-[var(--color-main)] transition duration-300 hover:-translate-y-1 hover:bg-[var(--color-main)] hover:text-white sm:w-28">login</a>
+                <a href="#footer" class="grid h-10 w-24 place-items-center rounded-md bg-[var(--color-main)] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)] sm:w-28">sign up</a>
             </div>
         </div>
     </header>
@@ -78,7 +79,7 @@
                         <span class="text-[var(--color-main)]">from 8 years</span>
                     </h1>
                     <p class="max-w-[560px] text-base text-[var(--color-text)]">Where to grow your business as a photographer: site or social media?</p>
-                    <a href="#" class="inline-grid h-11 w-28 place-items-center rounded-md bg-[var(--color-main)] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">register</a>
+                    <a href="#testimonial" class="inline-grid h-11 w-28 place-items-center rounded-md bg-[var(--color-main)] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">register</a>
                 </div>
                 <div class="hero-image-wrap flex w-full justify-center lg:w-1/2 lg:justify-end" data-aos="zoom-in" data-aos-delay="100">
                     <img src="images/Illustration.png" alt="Business growth illustration" class="hero-image h-auto w-full max-w-[430px] transition duration-500 hover:-translate-y-2 hover:scale-[1.02]">
@@ -184,8 +185,11 @@
                 <div class="w-full space-y-5 lg:w-[50%]" data-aos="fade-up" data-aos-delay="100">
                     <p class="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-main)]">About</p>
                     <h2 class="max-w-[95%] text-[32px] font-semibold capitalize leading-tight text-[var(--color-text)] [word-spacing:4px]">the unseen of spending three years at Pixelgrade</h2>
-                    <p class="max-w-[95%] text-[15px] leading-7 text-[var(--color-muted)] [word-spacing:2px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam id non incidunt mollitia tempora, fugiat, aliquid iste pariatur recusandae earum eaque quisquam, quod quibusdam suscipit soluta cupiditate ipsam hic non quod quibusdam suscipit soluta cupiditate ipsam hic non.</p>
-                    <a href="#" class="inline-grid min-h-[44px] w-[140px] place-items-center rounded-md bg-[var(--color-main)] px-4 py-[10px] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">learn more</a>
+                    <p class="max-w-[95%] text-[15px] leading-7 text-[var(--color-muted)] [word-spacing:2px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam id non incidunt mollitia tempora, fugiat, aliquid iste pariatur recusandae earum eaque quisquam.<span class="more-text hidden">
+                        fugiat, aliquid iste pariatur recusandae earum eaque quisquam.
+                    </span>
+                    </p>
+                    <a href="#" class="js-learn-more-btn inline-grid min-h-[44px] w-[140px] place-items-center rounded-md bg-[var(--color-main)] px-4 py-[10px] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">learn more</a>
                 </div>
             </div>
         </section>
@@ -206,7 +210,7 @@
                         <article class="group flex items-center gap-4 rounded-xl bg-white/90 p-5 shadow-[0_12px_24px_rgba(38,50,56,0.08)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_20px_34px_rgba(38,50,56,0.14)]">
                             <div class="text-[36px] text-[var(--color-main)] transition duration-300 group-hover:scale-110"><i class="fa-solid fa-user-group" aria-hidden="true"></i></div>
                             <div>
-                                <h3 class="text-[26px] font-bold leading-none text-[var(--color-main)]">2,245,341</h3>
+                                <h3 class="counter text-[26px] font-bold leading-none text-[var(--color-main)]" data-target="2245341">0</h3>                               
                                 <p class="mt-1 text-[15px] capitalize text-[#818282]">members</p>
                             </div>
                         </article>
@@ -215,7 +219,7 @@
                         <article class="group flex items-center gap-4 rounded-xl bg-white/90 p-5 shadow-[0_12px_24px_rgba(38,50,56,0.08)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_20px_34px_rgba(38,50,56,0.14)]">
                             <div class="text-[36px] text-[var(--color-main)] transition duration-300 group-hover:scale-110"><i class="fa-solid fa-hand-pointer" aria-hidden="true"></i></div>
                             <div>
-                                <h3 class="text-[26px] font-bold leading-none text-[var(--color-main)]">46,328</h3>
+                                <h3 class="counter text-[26px] font-bold leading-none text-[var(--color-main)]" data-target="46328">0</h3>
                                 <p class="mt-1 text-[15px] capitalize text-[#818282]">event bookings</p>
                             </div>
                         </article>
@@ -224,7 +228,7 @@
                         <article class="group flex items-center gap-4 rounded-xl bg-white/90 p-5 shadow-[0_12px_24px_rgba(38,50,56,0.08)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_20px_34px_rgba(38,50,56,0.14)]">
                             <div class="text-[36px] text-[var(--color-main)] transition duration-300 group-hover:scale-110"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
                             <div>
-                                <h3 class="text-[26px] font-bold leading-none text-[var(--color-main)]">828,867</h3>
+                                <h3 class="counter text-[26px] font-bold leading-none text-[var(--color-main)]" data-target="828867">0</h3>
                                 <p class="mt-1 text-[15px] capitalize text-[#818282]">clubs</p>
                             </div>
                         </article>
@@ -233,7 +237,7 @@
                         <article class="group flex items-center gap-4 rounded-xl bg-white/90 p-5 shadow-[0_12px_24px_rgba(38,50,56,0.08)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_20px_34px_rgba(38,50,56,0.14)]">
                             <div class="text-[36px] text-[var(--color-main)] transition duration-300 group-hover:scale-110"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></div>
                             <div>
-                                <h3 class="text-[26px] font-bold leading-none text-[var(--color-main)]">1,926,436</h3>
+                                <h3 class="counter text-[26px] font-bold leading-none text-[var(--color-main)]" data-target="1926436">0</h3>
                                 <p class="mt-1 text-[15px] capitalize text-[#818282]">payments</p>
                             </div>
                         </article>
@@ -248,8 +252,10 @@
                 <div class="w-full space-y-5 lg:w-[50%]" data-aos="fade-up">
                     <p class="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-main)]">Design</p>
                     <h2 class="max-w-[95%] text-[32px] font-semibold capitalize leading-tight text-[var(--color-text)] [word-spacing:4px]">how to design your site footer like we did</h2>
-                    <p class="max-w-[95%] text-[15px] leading-7 text-[var(--color-muted)] [word-spacing:2px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam id non incidunt mollitia tempora, fugiat, aliquid iste pariatur recusandae earum eaque quisquam, quod quibusdam suscipit soluta cupiditate ipsam hic non quod quibusdam suscipit soluta cupiditate ipsam hic non.</p>
-                    <a href="#" class="inline-grid min-h-[44px] w-[140px] place-items-center rounded-md bg-[var(--color-main)] px-4 py-[10px] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">learn more</a>
+                    <p class="max-w-[95%] text-[15px] leading-7 text-[var(--color-muted)] [word-spacing:2px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nam id non incidunt mollitia tempora, fugiat, aliquid iste pariatur recusandae earum eaque quisquam, quod quibusdam.<span class="more-text hidden">
+                        fugiat, aliquid iste pariatur recusandae earum eaque quisquam.
+                    </span></p>
+                    <a href="#" class="js-learn-more-btn inline-grid min-h-[44px] w-[140px] place-items-center rounded-md bg-[var(--color-main)] px-4 py-[10px] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">learn more</a>
                 </div>
                 <div class="w-full lg:w-[42%]" data-aos="fade-left" data-aos-delay="100">
                     <img src="images/pana.png" alt="Footer design illustration" class="mx-auto h-auto w-full max-w-[500px] transition duration-500 hover:-translate-y-2 hover:scale-[1.02] lg:object-contain">
@@ -276,27 +282,41 @@
                                     <div class="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-white to-transparent"></div>
                                     <div class="testimonial-marquee">
                                         <div class="testimonial-group">
-                                            <img src="images/logo/logo1.png" alt="Customer logo 1" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo2.png" alt="Customer logo 2" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo3.png" alt="Customer logo 3" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo4.png" alt="Customer logo 4" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo5.png" alt="Customer logo 5" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo6.png" alt="Customer logo 6" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo7.png" alt="Customer logo 7" class="h-10 w-auto shrink-0 object-contain">
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo1.png" alt="Customer logo 1" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo2.png" alt="Customer logo 2" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo3.png" alt="Customer logo 3" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo4.png" alt="Customer logo 4" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo5.png" alt="Customer logo 5" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo6.png" alt="Customer logo 6" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo7.png" alt="Customer logo 7" class="h-10 w-auto shrink-0 object-contain"></a>
                                         </div>
                                         <div class="testimonial-group" aria-hidden="true">
-                                            <img src="images/logo/logo1.png" alt="" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo2.png" alt="" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo3.png" alt="" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo4.png" alt="" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo5.png" alt="" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo6.png" alt="" class="h-10 w-auto shrink-0 object-contain">
-                                            <img src="images/logo/logo7.png" alt="" class="h-10 w-auto shrink-0 object-contain">
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo1.png" alt="" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo2.png" alt="" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo3.png" alt="" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo4.png" alt="" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo5.png" alt="" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo6.png" alt="" class="h-10 w-auto shrink-0 object-contain"></a>
+                                            <a href="#" data-fancybox="customers">
+                                                <img src="images/logo/logo7.png" alt="" class="h-10 w-auto shrink-0 object-contain"></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="inline-flex items-center gap-2 text-[18px] font-semibold capitalize text-[var(--color-main)] transition duration-300 hover:translate-x-1 hover:text-[#3b9440]">
+                            <a href="#" class="js-open-customers inline-flex items-center gap-2 text-[18px] font-semibold capitalize text-[var(--color-main)] transition duration-300 hover:translate-x-1 hover:text-[#3b9440]">
                                 meet all customers
                                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </a>
@@ -321,10 +341,11 @@
                         </div>
                         <div class="group blog-card-content relative z-10 mx-auto -mt-16 w-[75%] rounded-[12px] bg-[var(--color-soft)] px-5 py-6 text-center shadow-[5px_5px_10px_rgba(231,231,231,1)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_22px_40px_rgba(77,77,77,0.14)]">
                             <h3 class="text-[18px] font-bold capitalize text-[var(--color-text)] transition duration-300 group-hover:text-[var(--color-main)]">creating streamlined safeguarding processes with oneRen</h3>
-                            <p class="mt-3 text-sm leading-6 text-[var(--color-muted)]">Simple workflows can turn complex community tasks into a reliable routine for every team.</p>
-                            <a href="#" class="mt-5 inline-flex items-center gap-2 text-[18px] font-semibold capitalize text-[var(--color-main)] transition duration-300 hover:translate-x-1 hover:text-[#3b9440]">
-                                read more
-                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            <p class="mt-3 text-sm leading-6 text-[var(--color-muted)]">Simple workflows can turn complex community tasks into a reliable routine for every team.<span class="more-text hidden">
+                                fugiat, aliquid iste pariatur recusandae quisquam.
+                            </span></p>
+                            <a href="#" class="js-learn-more-btn mt-5 inline-flex items-center gap-2 text-[18px] font-semibold capitalize text-[var(--color-main)] transition duration-300 hover:translate-x-1 hover:text-[#3b9440]">
+                                learn more
                             </a>
                         </div>
                     </article>
@@ -334,10 +355,11 @@
                         </div>
                         <div class="group blog-card-content relative z-10 mx-auto -mt-16 w-[75%] rounded-[12px] bg-[var(--color-soft)] px-5 py-6 text-center shadow-[5px_5px_10px_rgba(231,231,231,1)] transition duration-300 hover:-translate-y-2 group-hover:shadow-[0_22px_40px_rgba(77,77,77,0.14)]">
                             <h3 class="text-[18px] font-bold capitalize text-[var(--color-text)] transition duration-300 group-hover:text-[var(--color-main)]">what are your safeguarding responsibilities and how can you manage them?</h3>
-                            <p class="mt-3 text-sm leading-6 text-[var(--color-muted)]">Understand the key responsibilities that help every community stay protected and informed.</p>
-                            <a href="#" class="mt-5 inline-flex items-center gap-2 text-[18px] font-semibold capitalize text-[var(--color-main)] transition duration-300 hover:translate-x-1 hover:text-[#3b9440]">
-                                read more
-                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            <p class="mt-3 text-sm leading-6 text-[var(--color-muted)]">Understand the key responsibilities that help.<span class="more-text hidden">
+                                fugiat, aliquid iste pariatur recusandae quisquam.
+                            </span></p>
+                            <a href="#" class="js-learn-more-btn mt-5 inline-flex items-center gap-2 text-[18px] font-semibold capitalize text-[var(--color-main)] transition duration-300 hover:translate-x-1 hover:text-[#3b9440]">
+                                learn more
                             </a>
                         </div>
                     </article>
@@ -347,10 +369,11 @@
                         </div>
                         <div class="group blog-card-content relative z-10 mx-auto -mt-16 w-[75%] rounded-[12px] bg-[var(--color-soft)] px-5 py-6 text-center shadow-[5px_5px_10px_rgba(231,231,231,1)] transition duration-300 group-hover:-translate-y-2 hover:shadow-[0_22px_40px_rgba(77,77,77,0.14)]">
                             <h3 class="text-[18px] font-bold capitalize text-[var(--color-text)] transition duration-300 group-hover:text-[var(--color-main)]">revamping the membership model with triathlon Australia</h3>
-                            <p class="mt-3 text-sm leading-6 text-[var(--color-muted)]">See how a refreshed digital experience can support both members and internal operations.</p>
-                            <a href="#" class="mt-5 inline-flex items-center gap-2 text-[18px] font-semibold capitalize text-[var(--color-main)] transition duration-300 hover:translate-x-1 hover:text-[#3b9440]">
-                                read more
-                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            <p class="mt-3 text-sm leading-6 text-[var(--color-muted)]">See how a refreshed digital experience can support both members and internal operations.<span class="more-text hidden">
+                                fugiat, aliquid iste pariatur recusandae quisquam.
+                            </span></p>
+                            <a href="#" class="js-learn-more-btn mt-5 inline-flex items-center gap-2 text-[18px] font-semibold capitalize text-[var(--color-main)] transition duration-300 hover:translate-x-1 hover:text-[#3b9440]">
+                                learn more
                             </a>
                         </div>
                     </article>
@@ -359,11 +382,11 @@
         </section>
 
         <!-- Demo CTA Section -->
-        <section class="bg-[var(--color-soft)] py-16">
+        <section id="footer" class="bg-[var(--color-soft)] py-16">
             <div class="mx-auto flex w-4/5 flex-col items-center text-center" data-aos="fade-up">
                 <p class="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-main)]">Demo</p>
                 <h2 class="mt-4 max-w-[760px] text-[38px] font-bold capitalize leading-tight text-[#263238] [word-spacing:3px] md:text-[46px]">pellentesque suscipit fringilla libero eu.</h2>
-                <a href="#" class="mt-8 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-[var(--color-main)] px-6 py-[10px] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">
+                <a href="#" class="js-demo-btn mt-8 inline-flex min-h-[44px] items-center justify-center gap-2 rounded-md bg-[var(--color-main)] px-6 py-[10px] text-sm font-medium capitalize text-white shadow-[0_12px_24px_rgba(76,175,79,0.22)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">
                     get a demo
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
@@ -377,7 +400,8 @@
                 <a href="#" aria-label="Nexcent footer logo">
                     <img src="images/Logo_foot.png" alt="Nexcent logo light" class="mb-6 h-auto w-[190px]">
                 </a>
-                <p class="text-sm capitalize text-[#c1c5c9]">Copyright &copy; 2020 Nexcent ltd.</p>
+                <p class="text-sm capitalize text-[#c1c5c9]">
+                Copyright © <span id="year"></span> Nexcent Ltd.</p>
                 <p class="mt-2 text-sm capitalize text-[#c1c5c9]">All rights reserved</p>
                 <ul class="mt-8 flex flex-wrap gap-4" aria-label="Social media links">
                     <li><a href="https://www.linkedin.com/in/nour-al-assar-7218b43b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="grid h-10 w-10 place-items-center rounded-full bg-[#3c464c] text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#3c464c]" aria-label="linkedin"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
@@ -410,10 +434,11 @@
                 </div>
                 <div data-aos="fade-up" data-aos-delay="350">
                     <h3 class="text-[22px] font-semibold capitalize text-white">stay up to date</h3>
-                    <form class="mt-5 flex flex-col gap-3 sm:max-w-[220px]" action="#" method="post">
+                    <form id="subscribe-form" class="mt-5 flex flex-col gap-3 sm:max-w-[220px]" action="https://formsubmit.co/nalsar572@gmail.com" method="POST">
                         <label for="email" class="sr-only">Email address</label>
-                        <input id="email" type="email" placeholder="Your email address" class="h-[44px] rounded-md border border-white/10 bg-[#515b60] px-4 text-sm text-white outline-none placeholder:text-[#c1c5c9] transition duration-300 focus:border-[var(--color-main)] focus:ring-2 focus:ring-[var(--color-main)]/30">
+                        <input id="email" name="email" type="email" placeholder="Your email address" class="h-[44px] rounded-md border border-white/10 bg-[#515b60] px-4 text-sm text-white outline-none placeholder:text-[#c1c5c9] transition duration-300 focus:border-[var(--color-main)] focus:ring-2 focus:ring-[var(--color-main)]/30">
                         <button type="submit" class="inline-grid min-h-[44px] place-items-center rounded-md bg-[var(--color-main)] px-4 py-2 text-sm font-medium capitalize text-white transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(76,175,79,0.35)]">subscribe</button>
+                        <p id="subscribe-message" class="text-sm"></p>
                     </form>
                 </div>
             </div>
@@ -422,6 +447,7 @@
     <!-- Libraries -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- App script -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
