@@ -180,13 +180,16 @@ document.getElementById("year").textContent =
 
 
 
+emailjs.init("SEjaoq1tmtQWd8MF3");
 
 const subscribeForm = document.getElementById("subscribe-form");
 const emailInput = document.getElementById("subscribe_email");
 const subscribeMessage = document.getElementById("subscribe-message");
 
 if (subscribeForm && emailInput && subscribeMessage) {
-    subscribeForm.addEventListener("submit", async (e) => {
+
+    subscribeForm.addEventListener("submit", function (e) {
+
         e.preventDefault();
 
         const emailValue = emailInput.value.trim();
@@ -203,28 +206,29 @@ if (subscribeForm && emailInput && subscribeMessage) {
             return;
         }
 
-        const formData = new FormData(subscribeForm);
+        emailjs.send("service_j9gz14o", "template_6enwh56", {
+            name: "New Subscriber",
+            email: emailValue,
+            message: emailValue,
+            title: "New Subscribe"
+        })
 
-        try {
-    const response = await fetch(subscribeForm.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-            Accept: "application/json"
-        }
+        .then(() => {
+
+            subscribeMessage.textContent = "Subscribed successfully ✓";
+            subscribeMessage.style.color = "#4CAF4F";
+
+            emailInput.value = "";
+
+        })
+
+        .catch(() => {
+
+            subscribeMessage.textContent = "Something went wrong";
+            subscribeMessage.style.color = "#ff6b6b";
+
+        });
+
     });
 
-    if (!response.ok) {
-        throw new Error("Form submit failed");
-    }
-
-    subscribeMessage.textContent = "Subscribed successfully ✓";
-    subscribeMessage.style.color = "#4CAF4F";
-
-    emailInput.value = "";
-} catch {
-    subscribeMessage.textContent = "Something went wrong, please try again";
-    subscribeMessage.style.color = "#ff6b6b";
-}
-    });
 }
