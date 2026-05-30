@@ -223,12 +223,14 @@ if (subscribeForm && emailInput && subscribeMessage) {
 
         })
 
-        .catch(() => {
+        .catch((error) => {
+    console.log("EmailJS Error:", error);
+    console.log("Status:", error.status);
+    console.log("Text:", error.text);
 
-            subscribeMessage.textContent = "Something went wrong";
-            subscribeMessage.style.color = "#ff6b6b";
-
-        });
+    subscribeMessage.textContent = "Something went wrong";
+    subscribeMessage.style.color = "#ff6b6b";
+});
 
     });
 
