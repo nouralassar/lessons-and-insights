@@ -207,7 +207,7 @@ if (subscribeForm && emailInput && subscribeMessage) {
             return;
         }
 
-       emailjs.send("service_j9gz14o", "template_6enwh56", {
+       emailjs.send("service_j9gz14o", "template_fs9oft2", {
     name: "New Subscriber",
     email: emailValue,
     message: emailValue,
