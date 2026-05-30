@@ -180,8 +180,9 @@ document.getElementById("year").textContent =
 
 
 
-emailjs.init("SEjaoq1tmtQWd8MF3");
-
+emailjs.init({
+    publicKey: "SEjaoq1tmtQWd8MF3"
+});
 const subscribeForm = document.getElementById("subscribe-form");
 const emailInput = document.getElementById("subscribe_email");
 const subscribeMessage = document.getElementById("subscribe-message");
@@ -206,12 +207,12 @@ if (subscribeForm && emailInput && subscribeMessage) {
             return;
         }
 
-        emailjs.send("service_j9gz14o", "6enwh56", {
-            name: "New Subscriber",
-            email: emailValue,
-            message: emailValue,
-            title: "New Subscribe"
-        })
+       emailjs.send("service_j9gz14o", "6enwh56", {
+    name: "New Subscriber",
+    email: emailValue,
+    message: emailValue,
+    title: "New Subscribe"
+}, "SEjaoq1tmtQWd8MF3")
 
         .then(() => {
 
